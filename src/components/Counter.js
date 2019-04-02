@@ -28,13 +28,13 @@ class Counter extends Component {
         store.dispatch(action);
     }
     handleOdd = () => {
-        if (store.getState() % 2 != 0) {
+        if (store.getState().counter % 2 !== 0) {
             let action = { type: 'ADD' };
             store.dispatch(action);
         }
     }
     handleEven = () => {
-        if (store.getState() % 2 == 0) {
+        if (store.getState().counter % 2 === 0) {
             let action = { type: 'ADD' };
             store.dispatch(action);
         }
